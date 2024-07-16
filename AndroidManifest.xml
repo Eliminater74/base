@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" package="com.tduk.appklr" platformBuildVersionCode="32" platformBuildVersionName="12">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-feature android:name="android.software.leanback" android:required="true"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@drawable/banner" android:extractNativeLibs="false" android:icon="@drawable/banner" android:isSplitRequired="true" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:exported="false" android:name="com.tduk.cachecleaner.AppsWhitelistActivity" android:theme="@style/LeanbackPreferences"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:label="@string/app_name" android:name="com.tduk.cachecleaner.ShellAutoRunner" android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:label="@string/title_activity_adb_shell" android:launchMode="singleTop" android:name="com.tduk.cachecleaner.AdbShell" android:parentActivityName="com.tduk.cachecleaner.ConnectActivity" android:resizeableActivity="true">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.tduk.cachecleaner.ConnectActivity"/>
+        </activity>
+        <service android:name="com.tduk.cachecleaner.service.ShellService"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

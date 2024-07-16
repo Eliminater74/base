@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textStyle="bold" android:textColor="#ff4caf50" android:gravity="center" android:id="@id/textViewNombreVideo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Please Ensure ADB Debugging Is Enabled In Your Settings" android:lines="2" android:scrollHorizontally="false" android:layout_alignLeft="@id/imageViewLogo" android:layout_alignRight="@id/imageViewLogo" android:layout_alignParentBottom="true" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:gravity="center" android:id="@id/imageViewLogo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:adjustViewBounds="true" android:text="Welcome to the TDUK APP Killer" android:layout_above="@id/textViewNombreVideo" android:layout_centerHorizontal="true" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+</RelativeLayout>
